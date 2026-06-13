@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.ndbc.noaa.gov/",
+  "name": "NDBC — National Data Buoy Center",
+  "description": "The NOAA National Data Buoy Center (NDBC) operates a global network of over 1,000 moored buoys, drifting buoys, Coastal-Marine Automated Network (C-MAN) stations, and partner stations that continuously measure and transmit meteorological and oceanographic conditions. Real-time and historical data are distributed freely via HTTP file URLs, a THREDDS/OPeNDAP server (NetCDF), an RSS observation feed, and a latest-observations snapshot updated every five minutes. No API key or authentication is required; data is in the public domain under U.S. government open-data policy.",
+  "url": "https://www.ndbc.noaa.gov/",
+  "logo": "https://www.ndbc.noaa.gov/images/nws/nws_logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "webmaster.ndbc@noaa.gov",
+    "contactType": "technical support"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "National Oceanic and Atmospheric Administration (NOAA)",
+    "url": "https://www.noaa.gov/"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "NDBC Data Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "NDBC Real-Time Data Service",
+          "description": "Provides access to the last 45 days of meteorological and oceanographic observations from NDBC moored buoys and C-MAN coastal stations.",
+          "url": "https://www.ndbc.noaa.gov/faq/rt_data_access.shtml",
+          "serviceType": "Data API",
+          "areaServed": "Global"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "NDBC Latest Observations Service",
+          "description": "Delivers a consolidated snapshot of the most recent observation from every active NDBC and partner station, refreshed every five minutes.",
+          "url": "https://www.ndbc.noaa.gov/faq/rss_access.shtml",
+          "serviceType": "Data API",
+          "areaServed": "Global"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "NDBC Historical Archive Service",
+          "description": "Provides quality-controlled historical observations from NDBC stations organized as annual files (prior years) and monthly files (current year).",
+          "url": "https://www.ndbc.noaa.gov/faq/archive.shtml",
+          "serviceType": "Data API",
+          "areaServed": "Global"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "NDBC THREDDS/OPeNDAP NetCDF Service",
+          "description": "Exposes NDBC station time-series data as NetCDF files through a THREDDS Data Server (TDS) using the OPeNDAP protocol.",
+          "url": "https://dods.ndbc.noaa.gov/",
+          "serviceType": "Data API",
+          "areaServed": "Global"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "NDBC HF Radar Surface Currents Service",
+          "description": "Provides near-real-time ocean surface current speeds and directions derived from High-Frequency (HF) radar systems.",
+          "url": "https://hfradar.ndbc.noaa.gov/",
+          "serviceType": "Data API",
+          "areaServed": "United States Coastal"
+        }
+      }
+    ]
+  },
+  "keywords": [
+    "NOAA",
+    "Marine",
+    "Buoys",
+    "Ocean",
+    "Weather",
+    "Waves",
+    "Meteorological",
+    "Oceanographic",
+    "Real-Time",
+    "Historical",
+    "Government",
+    "Open Data"
+  ],
+  "license": "https://www.noaa.gov/disclaimer",
+  "privacyPolicy": "https://www.noaa.gov/privacy-policy"
+}
