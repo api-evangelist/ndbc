@@ -1,0 +1,237 @@
+aid: ndbc
+name: NDBC — National Data Buoy Center
+description: >-
+  The NOAA National Data Buoy Center (NDBC) operates a global network of over
+  1,000 moored buoys, drifting buoys, Coastal-Marine Automated Network (C-MAN)
+  stations, and partner stations that continuously measure and transmit
+  meteorological and oceanographic conditions. Real-time and historical data —
+  wind direction and speed, wave height and period, sea surface temperature,
+  atmospheric pressure, air temperature, dew point, visibility, and salinity —
+  are distributed freely via HTTP file URLs, a THREDDS/OPeNDAP server (NetCDF),
+  an RSS observation feed, and a latest-observations snapshot updated every
+  five minutes. No API key or authentication is required; data is in the public
+  domain under U.S. government open-data policy.
+image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
+url: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/apis.yml
+access: 3rd-Party
+created: '2026-06-13'
+modified: '2026-06-13'
+position: Consumer
+specificationVersion: '0.19'
+tags:
+  - NOAA
+  - Marine
+  - Buoys
+  - Ocean
+  - Weather
+  - Waves
+  - Meteorological
+  - Oceanographic
+  - Real-Time
+  - Historical
+  - Government
+  - Open Data
+apis:
+  - aid: ndbc:realtime-data-service
+    name: NDBC Real-Time Data Service
+    description: >-
+      Provides access to the last 45 days of meteorological and oceanographic
+      observations from NDBC moored buoys and C-MAN coastal stations. Data files
+      are served via HTTPS at https://www.ndbc.noaa.gov/data/realtime2/ and
+      named by station identifier and measurement type (e.g., 41002.txt for
+      standard meteorology, 41002.spec for spectral wave summaries). Measurement
+      types include standard meteorology (wind, pressure, temperature, waves),
+      continuous winds, spectral wave data (summaries, raw energy density,
+      directional components), ADCP currents, oceanographic parameters, and
+      tide data. Most stations report hourly; data typically appears within
+      25 minutes after the hour. Missing values are represented as MM.
+    image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
+    humanURL: https://www.ndbc.noaa.gov/faq/rt_data_access.shtml
+    baseURL: https://www.ndbc.noaa.gov/data/realtime2
+    tags:
+      - Real-Time
+      - Buoys
+      - Meteorological
+      - Oceanographic
+      - Waves
+      - Winds
+      - Temperature
+      - Pressure
+    properties:
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/faq/rt_data_access.shtml
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/docs/ndbc_web_data_guide.pdf
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/faq/measdes.shtml
+      - type: BaseURL
+        url: https://www.ndbc.noaa.gov/data/realtime2/
+    contact:
+      - FN: NDBC Webmaster
+        email: webmaster.ndbc@noaa.gov
+    x-products:
+      - name: Free
+        url: /plans/free.md
+    x-rate-limits:
+      - url: /rate-limits/rate-limits.md
+    x-finops:
+      - url: /finops/finops.md
+
+  - aid: ndbc:latest-observations-service
+    name: NDBC Latest Observations Service
+    description: >-
+      Delivers a consolidated snapshot of the most recent observation from every
+      active NDBC and partner station, refreshed every five minutes. The flat
+      text file at https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt
+      contains 23 columns (station ID, latitude, longitude, UTC timestamp, wind
+      direction and speed, gust, wave height, dominant and average wave period,
+      mean wave direction, atmospheric pressure, pressure tendency, air
+      temperature, water temperature, dew point, visibility, and tide). Per-station
+      RSS files and a geographic observation search RSS feed are also available.
+      No authentication required.
+    image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
+    humanURL: https://www.ndbc.noaa.gov/faq/rss_access.shtml
+    baseURL: https://www.ndbc.noaa.gov/data/latest_obs
+    tags:
+      - Latest Observations
+      - Real-Time
+      - All Stations
+      - RSS
+      - Snapshot
+    properties:
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/faq/rss_access.shtml
+      - type: BaseURL
+        url: https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt
+      - type: BaseURL
+        url: https://www.ndbc.noaa.gov/rss/ndbc_obs_search.php
+    contact:
+      - FN: NDBC Webmaster
+        email: webmaster.ndbc@noaa.gov
+
+  - aid: ndbc:historical-archive-service
+    name: NDBC Historical Archive Service
+    description: >-
+      Provides quality-controlled historical observations from NDBC stations
+      organized as annual files (prior years) and monthly files (current year)
+      accessible at https://www.ndbc.noaa.gov/data/historical/. Measurement
+      categories mirror the real-time service: standard meteorology, continuous
+      winds, spectral wave data, ADCP currents, and oceanographic parameters.
+      Data formats and column definitions are identical to the real-time files
+      except that missing values use variable counts of nines (999, 9999, 99.0)
+      rather than MM. A web-based historical observation search is available at
+      histsearch.php and climatic summaries at climate.php.
+    image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
+    humanURL: https://www.ndbc.noaa.gov/faq/archive.shtml
+    baseURL: https://www.ndbc.noaa.gov/data/historical
+    tags:
+      - Historical
+      - Archive
+      - Climate
+      - Quality-Controlled
+      - Annual
+      - Monthly
+    properties:
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/faq/archive.shtml
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/faq/measdes.shtml
+      - type: BaseURL
+        url: https://www.ndbc.noaa.gov/data/historical/
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/histsearch.php
+      - type: Documentation
+        url: https://www.ndbc.noaa.gov/climate.php
+    contact:
+      - FN: NDBC Webmaster
+        email: webmaster.ndbc@noaa.gov
+
+  - aid: ndbc:thredds-netcdf-service
+    name: NDBC THREDDS/OPeNDAP NetCDF Service
+    description: >-
+      Exposes NDBC station time-series data as NetCDF files through a THREDDS
+      Data Server (TDS) at https://dods.ndbc.noaa.gov/ using the OPeNDAP
+      protocol. Dataset categories include standard meteorology (stdmet),
+      continuous winds (cwind), spectral wave density (swden), acoustic Doppler
+      current profiler (adcp, adcp2), oceanographic (ocean), water level
+      (wlevel), DART tsunami (dart), and peak/mean currents (pwind, mmbcur).
+      Files follow the naming pattern SSSSStYYYY.nc; real-time files use year
+      9999. An OceanSITES-format TAO buoy collection and HF Radar surface
+      currents are also available via the same server.
+    image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
+    humanURL: https://dods.ndbc.noaa.gov/
+    baseURL: https://dods.ndbc.noaa.gov
+    tags:
+      - NetCDF
+      - THREDDS
+      - OPeNDAP
+      - Scientific Data
+      - Currents
+      - Tsunami
+      - OceanSITES
+    properties:
+      - type: Documentation
+        url: https://dods.ndbc.noaa.gov/
+      - type: BaseURL
+        url: https://dods.ndbc.noaa.gov/
+      - type: Documentation
+        url: https://dods.ndbc.noaa.gov/oceansites/
+    contact:
+      - FN: NDBC Webmaster
+        email: webmaster.ndbc@noaa.gov
+
+  - aid: ndbc:hf-radar-service
+    name: NDBC HF Radar Surface Currents Service
+    description: >-
+      Provides near-real-time ocean surface current speeds and directions
+      derived from High-Frequency (HF) radar systems operated by NDBC and
+      partner networks in various nearshore areas of the United States. Both
+      hourly and 25-hour averaged current products are available. The service
+      is accessible at https://hfradar.ndbc.noaa.gov/ and integrates with the
+      broader NDBC station data infrastructure. Data supports maritime safety,
+      search and rescue operations, and coastal oceanographic research.
+    image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
+    humanURL: https://hfradar.ndbc.noaa.gov/
+    baseURL: https://hfradar.ndbc.noaa.gov
+    tags:
+      - HF Radar
+      - Surface Currents
+      - Coastal
+      - Nearshore
+      - Real-Time
+    properties:
+      - type: Documentation
+        url: https://hfradar.ndbc.noaa.gov/
+      - type: BaseURL
+        url: https://hfradar.ndbc.noaa.gov/
+    contact:
+      - FN: NDBC Webmaster
+        email: webmaster.ndbc@noaa.gov
+
+common:
+  - type: Portal
+    url: https://www.ndbc.noaa.gov/
+  - type: Documentation
+    url: https://www.ndbc.noaa.gov/docs/ndbc_web_data_guide.pdf
+  - type: Documentation
+    url: https://www.ndbc.noaa.gov/faq/rt_data_access.shtml
+  - type: Documentation
+    url: https://www.ndbc.noaa.gov/faq/measdes.shtml
+  - type: Documentation
+    url: https://www.ndbc.noaa.gov/faq/stations.shtml
+  - type: Contact
+    url: https://www.ndbc.noaa.gov/contacts.shtml
+  - type: PrivacyPolicy
+    url: https://www.noaa.gov/privacy-policy
+  - type: TermsOfService
+    url: https://www.noaa.gov/disclaimer
+  - type: Plans
+    url: /plans/free.md
+  - type: RateLimits
+    url: /rate-limits/rate-limits.md
+  - type: FinOps
+    url: /finops/finops.md
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
