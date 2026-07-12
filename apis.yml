@@ -209,6 +209,8 @@ apis:
         email: webmaster.ndbc@noaa.gov
 
 common:
+  - type: DomainSecurity
+    url: security/ndbc-domain-security.yml
   - type: Portal
     url: https://www.ndbc.noaa.gov/
   - type: Documentation
