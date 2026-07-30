@@ -11,6 +11,17 @@ description: >-
   an RSS observation feed, and a latest-observations snapshot updated every
   five minutes. No API key or authentication is required; data is in the public
   domain under U.S. government open-data policy.
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
 image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
 url: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/apis.yml
 access: 3rd-Party
