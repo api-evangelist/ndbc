@@ -11,6 +11,17 @@ description: >-
   an RSS observation feed, and a latest-observations snapshot updated every
   five minutes. No API key or authentication is required; data is in the public
   domain under U.S. government open-data policy.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: open
