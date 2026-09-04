@@ -38,7 +38,7 @@ url: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/apis.
 access: 3rd-Party
 created: '2026-06-13'
 modified: '2026-06-13'
-position: Consumer
+position: Consuming
 specificationVersion: '0.23'
 tags:
   - NOAA
