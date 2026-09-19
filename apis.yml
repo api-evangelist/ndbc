@@ -148,6 +148,13 @@ apis:
     baseURL: https://www.ndbc.noaa.gov/data/historical
     tags:
       - Historical
+      - Archives
+      - Climate
+      - Quality-Controlled
+      - Annual
+      - Monthly
+    tags_raw:
+      - Historical
       - Archive
       - Climate
       - Quality-Controlled
