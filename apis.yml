@@ -258,13 +258,6 @@ common:
     url: https://www.noaa.gov/privacy-policy
   - type: TermsOfService
     url: https://www.noaa.gov/disclaimer
-  - type: Plans
-    url: /plans/free.md
-  - type: RateLimits
-    url: /rate-limits/rate-limits.md
-  - type: FinOps
-    url: /finops/finops.md
-
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
