@@ -1,4 +1,4 @@
-# NDBC — National Data Buoy Center (ndbc)
+# NDBC — National Data Buoy Center
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,163 +66,88 @@
 
 The NOAA National Data Buoy Center (NDBC) operates a global network of over 1,000 moored buoys, drifting buoys, Coastal-Marine Automated Network (C-MAN) stations, and partner stations that continuously measure and transmit meteorological and oceanographic conditions. Real-time and historical data — wind direction and speed, wave height and period, sea surface temperature, atmospheric pressure, air temperature, dew point, visibility, and salinity — are distributed freely via HTTP file URLs, a THREDDS/OPeNDAP server (NetCDF), an RSS observation feed, and a latest-observations snapshot updated every five minutes. No API key or authentication is required; data is in the public domain under U.S. government open-data policy.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/apis.yml)
+**Areas:** NOAA · Marine · Buoys · Ocean · Weather · Waves · Meteorological · Oceanographic · Real-Time · Historical · Government · Open Data
 
-## Scope
+## NDBC — National Data Buoy Center on APIs.io
 
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for NDBC — National Data Buoy Center is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ndbc/](https://apis.io/providers/ndbc/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- NOAA
-- Marine
-- Buoys
-- Ocean
-- Weather
-- Waves
-- Meteorological
-- Oceanographic
-- Real-Time
-- Historical
-- Government
-- Open Data
+- [NDBC Real-Time Data Service](https://apis.io/apis/ndbc/realtime-data-service/) — Provides access to the last 45 days of meteorological and oceanographic observations from NDBC moored buoys and C-MAN coastal stations. Data files are…
+- [NDBC Latest Observations Service](https://apis.io/apis/ndbc/latest-observations-service/) — Delivers a consolidated snapshot of the most recent observation from every active NDBC and partner station, refreshed every five minutes. The flat text file…
+- [NDBC Historical Archive Service](https://apis.io/apis/ndbc/historical-archive-service/) — Provides quality-controlled historical observations from NDBC stations organized as annual files (prior years) and monthly files (current year) accessible…
+- [NDBC THREDDS/OPeNDAP NetCDF Service](https://apis.io/apis/ndbc/thredds-netcdf-service/) — Exposes NDBC station time-series data as NetCDF files through a THREDDS Data Server (TDS) at https://dods.ndbc.noaa.gov/ using the OPeNDAP protocol. Dataset…
+- [NDBC HF Radar Surface Currents Service](https://apis.io/apis/ndbc/hf-radar-service/) — Provides near-real-time ocean surface current speeds and directions derived from High-Frequency (HF) radar systems operated by NDBC and partner networks in…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-### NDBC Real-Time Data Service
+Authentication, trust centre, and vulnerability disclosure.
 
-Provides access to the last 45 days of meteorological and oceanographic observations from NDBC moored buoys and C-MAN coastal stations. Data files are served via HTTPS at https://www.ndbc.noaa.gov/data/realtime2/ and named by station identifier and measurement type (e.g., 41002.txt for standard meteorology, 41002.spec for spectral wave summaries). Measurement types include standard meteorology (wind, pressure, temperature, waves), continuous winds, spectral wave data (summaries, raw energy density, directional components), ADCP currents, oceanographic parameters, and tide data. Most stations report hourly; data typically appears within 25 minutes after the hour. Missing values are represented as MM.
+- [Ndbc Domain Security](https://apis.io/security/ndbc/ndbc-domain-security/)
 
-- **Human URL:** [https://www.ndbc.noaa.gov/faq/rt_data_access.shtml](https://www.ndbc.noaa.gov/faq/rt_data_access.shtml)
-- **Base URL:** `https://www.ndbc.noaa.gov/data/realtime2`
+## Where to find this API
 
-#### Tags
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- Real-Time
-- Buoys
-- Meteorological
-- Oceanographic
-- Waves
-- Winds
-- Temperature
-- Pressure
-
-#### Properties
-
-- [Documentation](https://www.ndbc.noaa.gov/faq/rt_data_access.shtml)
+- [Website](https://www.noaa.gov/)
 - [Documentation](https://www.ndbc.noaa.gov/docs/ndbc_web_data_guide.pdf)
-- [Documentation](https://www.ndbc.noaa.gov/faq/measdes.shtml)
-- [Base U R L](https://www.ndbc.noaa.gov/data/realtime2/)
+- [Terms of service](https://www.noaa.gov/disclaimer)
+- [Privacy policy](https://www.noaa.gov/privacy-policy)
 
-### NDBC Latest Observations Service
+## API Evangelist rating
 
-Delivers a consolidated snapshot of the most recent observation from every active NDBC and partner station, refreshed every five minutes. The flat text file at https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt contains 23 columns (station ID, latitude, longitude, UTC timestamp, wind direction and speed, gust, wave height, dominant and average wave period, mean wave direction, atmospheric pressure, pressure tendency, air temperature, water temperature, dew point, visibility, and tide). Per-station RSS files and a geographic observation search RSS feed are also available. No authentication required.
+**Kin Score 12.5** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-- **Human URL:** [https://www.ndbc.noaa.gov/faq/rss_access.shtml](https://www.ndbc.noaa.gov/faq/rss_access.shtml)
-- **Base URL:** `https://www.ndbc.noaa.gov/data/latest_obs`
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 10.5 |
 
-#### Tags
+**Agent readiness 0.0** — human-only
 
-- Latest Observations
-- Real-Time
-- All Stations
-- RSS
-- Snapshot
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-#### Properties
+**Regulatory alignment 9.8** — Government & Public Sector
 
-- [Documentation](https://www.ndbc.noaa.gov/faq/rss_access.shtml)
-- [Base U R L](https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt)
-- [Base U R L](https://www.ndbc.noaa.gov/rss/ndbc_obs_search.php)
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ndbc/](https://apis.io/providers/ndbc/).
 
-### NDBC Historical Archive Service
+## How this profile is made
 
-Provides quality-controlled historical observations from NDBC stations organized as annual files (prior years) and monthly files (current year) accessible at https://www.ndbc.noaa.gov/data/historical/. Measurement categories mirror the real-time service: standard meteorology, continuous winds, spectral wave data, ADCP currents, and oceanographic parameters. Data formats and column definitions are identical to the real-time files except that missing values use variable counts of nines (999, 9999, 99.0) rather than MM. A web-based historical observation search is available at histsearch.php and climatic summaries at climate.php.
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- **Human URL:** [https://www.ndbc.noaa.gov/faq/archive.shtml](https://www.ndbc.noaa.gov/faq/archive.shtml)
-- **Base URL:** `https://www.ndbc.noaa.gov/data/historical`
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for NDBC — National Data Buoy Center: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-#### Tags
+## Open an issue
 
-- Historical
-- Archive
-- Climate
-- Quality-Controlled
-- Annual
-- Monthly
-
-#### Properties
-
-- [Documentation](https://www.ndbc.noaa.gov/faq/archive.shtml)
-- [Documentation](https://www.ndbc.noaa.gov/faq/measdes.shtml)
-- [Base U R L](https://www.ndbc.noaa.gov/data/historical/)
-- [Documentation](https://www.ndbc.noaa.gov/histsearch.php)
-- [Documentation](https://www.ndbc.noaa.gov/climate.php)
-
-### NDBC THREDDS/OPeNDAP NetCDF Service
-
-Exposes NDBC station time-series data as NetCDF files through a THREDDS Data Server (TDS) at https://dods.ndbc.noaa.gov/ using the OPeNDAP protocol. Dataset categories include standard meteorology (stdmet), continuous winds (cwind), spectral wave density (swden), acoustic Doppler current profiler (adcp, adcp2), oceanographic (ocean), water level (wlevel), DART tsunami (dart), and peak/mean currents (pwind, mmbcur). Files follow the naming pattern SSSSStYYYY.nc; real-time files use year 9999. An OceanSITES-format TAO buoy collection and HF Radar surface currents are also available via the same server.
-
-- **Human URL:** [https://dods.ndbc.noaa.gov/](https://dods.ndbc.noaa.gov/)
-- **Base URL:** `https://dods.ndbc.noaa.gov`
-
-#### Tags
-
-- NetCDF
-- THREDDS
-- OPeNDAP
-- Scientific Data
-- Currents
-- Tsunami
-- OceanSITES
-
-#### Properties
-
-- [Documentation](https://dods.ndbc.noaa.gov/)
-- [Base U R L](https://dods.ndbc.noaa.gov/)
-- [Documentation](https://dods.ndbc.noaa.gov/oceansites/)
-
-### NDBC HF Radar Surface Currents Service
-
-Provides near-real-time ocean surface current speeds and directions derived from High-Frequency (HF) radar systems operated by NDBC and partner networks in various nearshore areas of the United States. Both hourly and 25-hour averaged current products are available. The service is accessible at https://hfradar.ndbc.noaa.gov/ and integrates with the broader NDBC station data infrastructure. Data supports maritime safety, search and rescue operations, and coastal oceanographic research.
-
-- **Human URL:** [https://hfradar.ndbc.noaa.gov/](https://hfradar.ndbc.noaa.gov/)
-- **Base URL:** `https://hfradar.ndbc.noaa.gov`
-
-#### Tags
-
-- HF Radar
-- Surface Currents
-- Coastal
-- Nearshore
-- Real-Time
-
-#### Properties
-
-- [Documentation](https://hfradar.ndbc.noaa.gov/)
-- [Base U R L](https://hfradar.ndbc.noaa.gov/)
-
-## Common Properties
-
-- [Portal](https://www.ndbc.noaa.gov/)
-- [Documentation](https://www.ndbc.noaa.gov/docs/ndbc_web_data_guide.pdf)
-- [Documentation](https://www.ndbc.noaa.gov/faq/rt_data_access.shtml)
-- [Documentation](https://www.ndbc.noaa.gov/faq/measdes.shtml)
-- [Documentation](https://www.ndbc.noaa.gov/faq/stations.shtml)
-- [Contact](https://www.ndbc.noaa.gov/contacts.shtml)
-- [Privacy Policy](https://www.noaa.gov/privacy-policy)
-- [Terms of Service](https://www.noaa.gov/disclaimer)
-- [Plans](/plans/free.md)
-- [Rate Limits](/rate-limits/rate-limits.md)
-- [Fin Ops](/finops/finops.md)
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ndbc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
